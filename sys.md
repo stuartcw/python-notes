@@ -2,9 +2,7 @@
 
 This module provides access to some objects used or maintained by the interpreter and to functions that interact strongly with the interpreter.
 
-## Function & Object Descriptions
-
-### Dynamic objects:
+## Dynamic objects:
 
  * [argv](sys/demo-sys.py) -- command line arguments; argv[0] is the script pathname if known
  * [path](sys/demo-sys.py) -- module search path; path[0] is the script directory, else an empty string.
@@ -51,3 +49,29 @@ The function exc_info() should be used instead of these three, because it is thr
 #### Hooking System Exit
 
 * exitfunc -- if sys.exitfunc exists, this routine is called when Python exits. Assigning to sys.exitfunc is deprecated; use the [atexit](atexit.md) module instead.
+
+## Static objects:
+
+### Information about types
+* float_info -- a dict with information about the float inplementation.
+* long_info -- a struct sequence with information about the long implementation.
+* maxint -- the largest supported integer (the smallest is -maxint-1)
+* maxsize -- the largest supported length of containers.
+* maxunicode -- the largest supported character
+### Information about the interpreter
+* builtin_module_names -- tuple of module names built into this interpreter
+* version -- the version of this interpreter as a string
+* version_info -- version information as a named tuple
+* hexversion -- version information encoded as a single integer
+* copyright -- copyright notice pertaining to this interpreter
+* platform -- platform identifier
+* executable -- absolute path of the executable binary of the Python interpreter
+* prefix -- prefix used to find the Python library
+* exec_prefix -- prefix used to find the machine-specific Python library
+* float_repr_style -- string indicating the style of repr() output for floats
+### Original system file objects
+* \_\_stdin\_\_ -- the original stdin; don't touch!
+* \_\_stdout\_\_ -- the original stdout; don't touch!
+* \_\_stderr\_\_ -- the original stderr; don't touch!
+* \_\_displayhook\_\_ -- the original displayhook; don't touch!
+* \_\_excepthook\_\_ -- the original excepthook; don't touch!

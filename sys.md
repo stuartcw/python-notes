@@ -10,6 +10,9 @@ This module provides access to some objects used or maintained by the interprete
  * [path](sys/demo-sys.py) -- module search path; path[0] is the script directory, else an empty string.
  * [modules](sys/demo-sys.py) -- dictionary of loaded modules
  
+ 
+ ### System Hooks
+ 
  * displayhook -- called to show results in an interactive session. Probably only useful when writing a debugger.
  * excepthook -- called to handle any uncaught exception other than SystemExit
 

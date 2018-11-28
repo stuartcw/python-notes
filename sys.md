@@ -23,6 +23,10 @@ By assigning other file objects (or objects that behave like files) to these, it
 * stdout -- standard output file object; used by the print statement
 * stderr -- standard error object; used for error messages
 
+#### Links
+
+* [Redirect stdout and stderr to a logger in Python](https://www.electricmonk.nl/log/2011/08/14/redirect-stdout-and-stderr-to-a-logger-in-python/)
+
 ### Information about the last exception
 
  * last_type -- type of last uncaught exception

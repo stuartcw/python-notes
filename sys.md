@@ -7,7 +7,7 @@ This module provides access to some objects used or maintained by the interprete
 ### Dynamic objects:
 
  * [argv](sys/demo-sys.py) -- command line arguments; argv[0] is the script pathname if known
- * [path[(sys/demo-sys.py) -- module search path; path[0] is the script directory, else an empty string.
+ * [path](sys/demo-sys.py) -- module search path; path[0] is the script directory, else an empty string.
  * [modules](sys/demo-sys.py) -- dictionary of loaded modules
  
  * displayhook -- called to show results in an interactive session. Probably only usual when writing a debugger.

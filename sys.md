@@ -43,4 +43,4 @@ The function exc_info() should be used instead of these three, because it is thr
 
 #### Hooking System Exit
 
-* exitfunc -- if sys.exitfunc exists, this routine is called when Python exits. Assigning to sys.exitfunc is deprecated; use the atexit module instead.
+* exitfunc -- if sys.exitfunc exists, this routine is called when Python exits. Assigning to sys.exitfunc is deprecated; use the [atexit](atexit.md) module instead.

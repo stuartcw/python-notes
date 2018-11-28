@@ -15,18 +15,23 @@ This module provides access to some objects used or maintained by the interprete
 
 To customize printing in an interactive session or to install a custom top-level exception handler, assign other functions to replace these.
 
-* exitfunc -- if sys.exitfunc exists, this routine is called when Python exits
-      Assigning to sys.exitfunc is deprecated; use the atexit module instead.
+### Standard System File Objects
+
+By assigning other file objects (or objects that behave like files) to these, it is possible to redirect all of the interpreter's I/O.
 
 * stdin -- standard input file object; used by raw_input() and input()
 * stdout -- standard output file object; used by the print statement
 * stderr -- standard error object; used for error messages
 
-By assigning other file objects (or objects that behave like files) to these, it is possible to redirect all of the interpreter's I/O.
+### Information about the last exception
 
  * last_type -- type of last uncaught exception
  * last_value -- value of last uncaught exception
  * last_traceback -- traceback of last uncaught exception
+
+### Deprecated Functions & Objects
+
+#### Interactive Session Exception Handlers
 
 These three are only available in an interactive session after a traceback has been printed.
 
@@ -35,3 +40,7 @@ These three are only available in an interactive session after a traceback has b
  * exc_traceback -- traceback of exception currently being handled
 
 The function exc_info() should be used instead of these three, because it is thread-safe.
+
+#### Hooking System Exit
+
+* exitfunc -- if sys.exitfunc exists, this routine is called when Python exits. Assigning to sys.exitfunc is deprecated; use the atexit module instead.
